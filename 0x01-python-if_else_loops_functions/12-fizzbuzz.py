@@ -1,5 +1,3 @@
-table File  11 lines (11 sloc)  323 Bytes
-
 #!/usr/bin/python3
 def fizzbuzz():
     for i in range(1, 101):
