@@ -1,38 +1,38 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+""" Create Class for square and add Exeception to size """
 
 
 class Square:
-    """Represent a square."""
+    """ Class with Init method and Exeception try / execpt """
 
-    def __init__(self, size):
-        """Initialize a new square.
-        Args:
-            size (int): The size of the new square.
-        """
-        self.size = size
+    def __init__(self, size=0):
+        """initialization"""
+        self.__size = size
 
     @property
     def size(self):
-        """Get/set the current size of the square."""
-        return (self.__size)
+        """ getter """
+        return self.__size
 
-[2;2R[>77;30200;0c]10;rgb:bfbf/bfbf/bfbf\]11;rgb:0000/0000/0000\    @size.setter
+    @size.setter
     def size(self, value):
-        if not isinstance(value, int):
+        """ Setter """
+        if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+        return self.__size
 
     def area(self):
-        """Return the current area of the square."""
-        return (self.__size * self.__size)
+        """Area calculation"""
+        return self.__size ** 2
 
     def my_print(self):
-        """Print the square with the # character."""
+        """Prints"""
         for i in range(0, self.__size):
-            [print("#", end="") for j in range(self.__size)]
+            for j in range(0, self.__size):
+                print("#", end='')
             print("")
         if self.__size == 0:
             print("")
