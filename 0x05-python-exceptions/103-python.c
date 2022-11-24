@@ -2,11 +2,11 @@
 void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
 void print_python_float(PyObject *p);
-/**
- * * print_python_list - Prints basic info about Python lists.
- * * @p: A PyObject list object.
- * * Return: Noting
- * */
+/*
+ * print_python_list - Prints basic info about Python lists.
+ * @p: A PyObject list object.
+ * Return: Noting
+ */
 void print_python_list(PyObject *p)
 {
 	long int size, i;
@@ -39,10 +39,10 @@ void print_python_list(PyObject *p)
 			print_python_float(obj);
 	}
 }
-/**
- * * print_python_bytes - Prints basic info about Python byte objects.
- * * @p: A PyObject byte object.
- * */
+/*
+ * print_python_bytes - Prints basic info about Python byte objects.
+ * @p: A PyObject byte object.
+ */
 void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size, i;
@@ -76,11 +76,11 @@ void print_python_bytes(PyObject *p)
 	}
 }
 
-/**
- * * print_python_float - Prints basic info about Python float objects.
- * * @p: object
- * * Return: Noting
- * */
+/*
+ * print_python_float - Prints basic info about Python float objects.
+ * @p: object
+ * Return: Noting
+ */
 void print_python_float(PyObject *p)
 {
 	char *buffer = NULL;
